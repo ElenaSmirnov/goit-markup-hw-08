@@ -1,0 +1,142 @@
+.footer-section .logo-studio {
+  color: $primary-white-color;
+  .logo {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-section .element {
+  display: flex;
+  margin-bottom: 9px;
+
+  &:nth-child(3n) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-contacts {
+  padding-top: 20px;
+
+  .address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-white-color;
+  }
+
+  .link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+  }
+}
+
+.footer-content {
+  flex-basis: 25%;
+  margin-right: 30px;
+}
+
+.subscribe {
+  flex-basis: 25%;
+  margin-right: 30px;
+}
+
+.subscribe-list {
+  display: flex;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.88;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+
+.button-follow-us {
+  display: flex;
+  border: none;
+  border-radius: 4px;
+  min-width: 200px;
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+
+  cursor: pointer;
+  color: $primary-white-color;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  transition: background-color 250ms $transition-timing-function;
+}
+
+.button-follow-us-icon::after {
+  display: inline-flex;
+  align-self: center;
+}
+
+.button-follow-us-icon {
+  fill: $primary-white-color;
+  margin-left: 10px;
+  border: unset;
+  border: none;
+}
+
+.follow-us {
+  flex-basis: 50%;
+}
+
+.form-input {
+  width: 358px;
+  height: 50px;
+  color: $primary-white-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+
+  padding: 15px 16px;
+}
+
+.form-title {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.88;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+
+  color: $primary-white-color;
+}
+
+.form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
