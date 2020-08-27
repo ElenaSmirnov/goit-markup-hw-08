@@ -2,7 +2,19 @@
   padding-bottom: 94px;
 }
 
-.section-features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 1199px) {
+  .section-features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section-activities {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-features {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }

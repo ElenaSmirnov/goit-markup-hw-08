@@ -2,7 +2,6 @@
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 94px;
 
   .modal-button {
     display: inline-block;
@@ -70,6 +69,7 @@
 
 @media screen and (min-width: 480px) {
   .overlay {
+    background-color: rgba(47, 48, 58, 0.8);
     background-image: url(../images/Header-mobile.jpg);
   }
 }
@@ -92,7 +92,12 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url("../images/Header-tablet@2x.jpg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url("../images/Header-tablet@2x.jpg");
   }
 }
 
@@ -105,6 +110,9 @@
     line-height: 1.62;
 
     letter-spacing: 0.06em;
+  }
+  .section-hero {
+    padding-bottom: 60px;
   }
 }
 
@@ -121,6 +129,9 @@
   .title-hero {
     font-size: 44px;
     line-height: 1.4;
+  }
+  .section-hero {
+    padding-bottom: 94px;
   }
 }
 

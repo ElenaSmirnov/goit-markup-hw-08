@@ -46,7 +46,6 @@
 .mail-smartphone-icon {
   justify-content: center;
   fill: currentColor;
-  /* margin-right: 10px;*/
 
   &:hover,
   &:focus {
@@ -62,6 +61,15 @@
 .contacts-list-icon:hover,
 .contacts-list-icon:focus {
   color: $accent-color;
+}
+
+.contacts-list {
+  .link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    transition: color 250ms $transition-timing-function;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -104,7 +112,6 @@
     .link {
       font-weight: 500;
       letter-spacing: 0.02em;
-      color: $primary-text-color;
       transition: color 250ms $transition-timing-function;
       padding-bottom: 16px;
     }
@@ -176,9 +183,6 @@
   .contacts-list-item:not(:last-child) {
     margin-bottom: 10px;
   }
-  .mail-smartphone-icon {
-    margin-right: 8px;
-  }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
@@ -188,6 +192,10 @@
 
   .contacts .link {
     font-size: 12px;
+  }
+  .mail-smartphone-icon {
+    text-align: center;
+    margin-right: 8px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -216,5 +224,10 @@
     margin-right: 85px;
     font-size: 26px;
     line-height: 1.2;
+  }
+
+  .mail-smartphone-icon {
+    text-align: center;
+    margin-right: 10px;
   }
 }
