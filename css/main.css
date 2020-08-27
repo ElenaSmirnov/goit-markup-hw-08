@@ -477,6 +477,7 @@ p {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
   .menu.is-open {
+    background-color: #ffffff;
     opacity: 1;
     transform: translateY(0%);
   }
@@ -631,15 +632,66 @@ p {
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Header-img.jpg);
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .overlay {
+    background-image: url(../images/Header-mobile.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url("../images/Header-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: url(../images/Header-tablet.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url("../images/Header-tablet@2x.jpg");
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .overlay {
+    height: 400px;
+  }
+  .title-hero {
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    height: 600px;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Header-desktop.jpg);
+  }
+  .title-hero {
+    font-size: 44px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url("../images/Header-desktop@2x.jpg");
+  }
 }
 
 .features-list {
