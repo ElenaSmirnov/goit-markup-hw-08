@@ -191,12 +191,18 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list-item">
-              <img
-                class="team-list-item-image"
-                src="./images/Nikolai.jpg"
-                alt="Член компании"
-                width=""
-              />
+               <picture>
+            <source srcset="./images/Nikolai-mobile.jpg 1x,
+            ./images/Nikolai-mobile@2x.jpg 2x" class="team-list-item" alt="Член компании"  />
+
+            <source srcset="./images/Nikolai-tablet.jpg 1x,
+            ./images/Nikolai-tablet@2x.jpg 2x" class="team-list-item" alt="Член компании"/>
+
+            <source srcset="./images/Nikolai-desktop.jpg 1x,
+            ./images/Nikolai-desktop@2x.jpg 2x" class="team-list-item" alt="Член компании" />
+
+            <img src="./images/our_team/team_1.jpg" alt=""/>
+          </picture>
               <h3 class="member">Николай Кучеренко</h3>
               <p class="specialty" lang="en">Product Designer</p>
               <ul class="list social-list">
