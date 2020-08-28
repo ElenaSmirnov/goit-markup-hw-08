@@ -1,3 +1,7 @@
+/*.modal-open {
+  overflow: hidden;
+}*/
+
 .backdrop {
   position: fixed;
   left: 0;
@@ -297,4 +301,20 @@
 
 .modal-close-icon:hover {
   fill: $accent-color;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal-form {
+    width: 450px;
+    height: 609px;
+  }
+  .modal-form-option-span {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  .modal-form-option-label-link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
