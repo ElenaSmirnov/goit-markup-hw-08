@@ -24,63 +24,81 @@
     <!-- Шапка сайта -->
     <header class="header">
       <div class="container header-container">
-        
-          <a class="logo" lang="en" href="./index.html">
-            <span class="logo-web">Web</span
-            ><span class="logo-studio">Studio</span>
-          </a>
-          <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" data-menu-button>
-            <svg width="40px" height="40px">
-              <use class="item-burger" href="./images/sprite.svg#icon-burger"></use>
-              <use class="item-close" href="./images/sprite.svg#icon-close-modal"></use>
-            </svg>
-          </button>
-          <div class="menu" data-menu>
+        <a class="logo" lang="en" href="./index.html">
+          <span class="logo-web">Web</span
+          ><span class="logo-studio">Studio</span>
+        </a>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="menu"
+          data-menu-button
+        >
+          <svg width="40px" height="40px">
+            <use
+              class="item-burger"
+              href="./images/sprite.svg#icon-burger"
+            ></use>
+            <use
+              class="item-close"
+              href="./images/sprite.svg#icon-close-modal"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu" data-menu>
           <nav class="site-nav">
-          <ul class="site-nav-list list">
-            <li class="site-nav-list-item">
-              <a
-                href="./index.html"
-                class="active-list-item site-nav-list-item-link link"
-                >Студия</a
-              >
-            </li>
-            <li class="site-nav-list-item">
-              <a href="./portfolio.html" class="site-nav-list-item-link link"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav-list-item">
-              <a href="" class="site-nav-list-item-link link">Контакты</a>
-            </li>
-          </ul>
-          
-        </nav>
-        
-        <div class="contacts">
-          <ul class="contacts-list list">
-            <li class="contacts-list-item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="contacts-list-icon link"
-              >
-                <svg class="mail-smartphone-icon" width="16px" height="11.2px">
-                  <use href="./images/sprite.svg#icon-e-mail"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="contacts-list-item">
-              <a href="tel:+380961111111" class="contacts-list-icon link">
-                <svg class="mail-smartphone-icon" width="10px" height="14.94px">
-                  <use href="./images/sprite.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+            <ul class="site-nav-list list">
+              <li class="site-nav-list-item">
+                <a
+                  href="./index.html"
+                  class="active-list-item site-nav-list-item-link link"
+                  >Студия</a
+                >
+              </li>
+              <li class="site-nav-list-item">
+                <a href="./portfolio.html" class="site-nav-list-item-link link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav-list-item">
+                <a href="" class="site-nav-list-item-link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="contacts">
+            <ul class="contacts-list list">
+              <li class="contacts-list-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts-list-icon link"
+                >
+                  <svg
+                    class="mail-smartphone-icon"
+                    width="16px"
+                    height="11.2px"
+                  >
+                    <use href="./images/sprite.svg#icon-e-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts-list-item">
+                <a href="tel:+380961111111" class="contacts-list-icon link">
+                  <svg
+                    class="mail-smartphone-icon"
+                    width="10px"
+                    height="14.94px"
+                  >
+                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
       </div>
     </header>
     <main>
@@ -93,7 +111,8 @@
         <button class="modal-button" type="submit" data-modal-open>
           Заказать услугу
         </button>
-      </section>-->
+      </section>
+      -->
       <!-- Наши особенности-->
       <section class="section section-features container">
         <h2 class="section-title visually-hidden">Наши особенности</h2>
@@ -186,23 +205,44 @@
         </div>
       </section>
       <!--Наша команда-->
-     <section class="section team">
+      <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list-item">
-               <picture>
-            <source srcset="./images/Nikolai-mobile.jpg 1x,
-            ./images/Nikolai-mobile@2x.jpg 2x" class="team-list-item" alt="Член компании"  />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Nikolai-mobile.jpg    1x,
+                    ./images/Nikolai-mobile@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:480px)"
+                />
 
-            <source srcset="./images/Nikolai-tablet.jpg 1x,
-            ./images/Nikolai-tablet@2x.jpg 2x" class="team-list-item" alt="Член компании"/>
+                <source
+                  srcset="
+                    ./images/Nikolai-tablet.jpg    1x,
+                    ./images/Nikolai-tablet@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:768px)"
+                />
 
-            <source srcset="./images/Nikolai-desktop.jpg 1x,
-            ./images/Nikolai-desktop@2x.jpg 2x" class="team-list-item" alt="Член компании" />
+                <source
+                  srcset="
+                    ./images/Nikolai-desktop.jpg    1x,
+                    ./images/Nikolai-desktop@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:1200px"
+                />
 
-            <img src="./images/our_team/team_1.jpg" alt=""/>
-          </picture>
+                <img src="./images/Nikolai.jpg" alt="Член компании" />
+              </picture>
               <h3 class="member">Николай Кучеренко</h3>
               <p class="specialty" lang="en">Product Designer</p>
               <ul class="list social-list">
@@ -253,12 +293,39 @@
               </ul>
             </li>
             <li class="team-list-item">
-              <img
-                class="team-list-item-image"
-                src="./images/Olga.jpg"
-                alt="Член компании"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Olga-mobile.jpg    1x,
+                    ./images/Olga-mobile@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/Olga-tablet.jpg    1x,
+                    ./images/Olga-tablet@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/Olga-desktop.jpg    1x,
+                    ./images/Olga-desktop@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:1200px"
+                />
+
+                <img src="./images/Olga.jpg" alt="Член компании" />
+              </picture>
               <h3 class="member">Ольга Иванова</h3>
               <p class="specialty" lang="en">Frontend Developer</p>
               <ul class="list social-list">
@@ -309,12 +376,39 @@
               </ul>
             </li>
             <li class="team-list-item">
-              <img
-                class="team-list-item-image"
-                src="./images/Andrei.jpg"
-                alt="Член компании"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Andrei-mobile.jpg    1x,
+                    ./images/Andrei-mobile@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/Andrei-tablet.jpg    1x,
+                    ./images/Andrei-tablet@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/Andrei-desktop.jpg    1x,
+                    ./images/Andrei-desktop@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:1200px"
+                />
+
+                <img src="./images/Andrei.jpg" alt="Член компании" />
+              </picture>
               <h3 class="member">Андрей Шевченко</h3>
               <p class="specialty" lang="en">Marketing</p>
               <ul class="list social-list">
@@ -365,12 +459,39 @@
               </ul>
             </li>
             <li class="team-list-item">
-              <img
-                class="team-list-item-image"
-                src="./images/Ivan.jpg"
-                alt="Член компании"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Ivan-mobile.jpg    1x,
+                    ./images/Ivan-mobile@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/Ivan-tablet.jpg    1x,
+                    ./images/Ivan-tablet@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/Ivan-desktop.jpg    1x,
+                    ./images/Ivan-desktop@2x.jpg 2x
+                  "
+                  class="team-list-item-image"
+                  alt="Член компании"
+                  media="(min-width:1200px"
+                />
+
+                <img src="./images/Ivan.jpg" alt="Член компании" />
+              </picture>
               <h3 class="member">Иван Николаев</h3>
               <p class="specialty" lang="en">UI Designer</p>
               <ul class="list social-list">
@@ -424,7 +545,7 @@
         </div>
       </section>
       <!--Постоянные клиенты-->
-    <!--  <section class="section clients-section">
+      <section class="section clients-section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients list">
@@ -660,7 +781,8 @@
         </label>
         <button type="submit" class="modal-form-btn">Отправить</button>
       </form>
-    </div>-->
+    </div>
+    -->
 
     <script src="./javascript/modal.js"></script>
     <script src="./javascript/menu.js"></script>

@@ -16,6 +16,7 @@
 
 .footer-contacts {
   padding-top: 20px;
+  align-items: center;
 
   .address {
     font-style: normal;
@@ -34,18 +35,9 @@
   }
 }
 
-.footer-content {
-  flex-basis: 25%;
-  margin-right: 30px;
-}
-
-.subscribe {
-  flex-basis: 25%;
-  margin-right: 30px;
-}
-
 .subscribe-list {
   display: flex;
+  justify-content: center;
 }
 
 .subscribe-title {
@@ -59,8 +51,27 @@
   margin-bottom: 20px;
 }
 
+.subscribe-list .social-list-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.social-list-item-icon {
+  transition: color 250ms $transition-timing-function;
+}
+
+.subscribe-list .social-list-item .social-list-item-link {
+  fill: $primary-white-color;
+}
+
 .button-follow-us {
-  display: flex;
+  /* display: flex;*/
   border: none;
   border-radius: 4px;
   min-width: 200px;
@@ -93,10 +104,6 @@
   border: none;
 }
 
-.follow-us {
-  flex-basis: 50%;
-}
-
 .form-input {
   width: 358px;
   height: 50px;
@@ -106,7 +113,7 @@
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  margin-right: 12px;
+  /* margin-right: 12px;*/
 
   padding: 15px 16px;
 }
@@ -124,7 +131,6 @@
 }
 
 .footer-form {
-  display: flex;
   align-items: center;
 
   color: $primary-white-color;
@@ -139,4 +145,74 @@
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-content {
+    text-align: center;
+  }
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
+  .subscribe {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form-input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .footer-content {
+    flex-basis: 50%;
+  }
+  .follow-us {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-input {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .form-input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .follow-us {
+    flex-basis: 50%;
+  }
+
+  .footer-content {
+    flex-basis: 25%;
+    margin-right: 30px;
+  }
+
+  .subscribe {
+    flex-basis: 25%;
+    margin-right: 30px;
+  }
+  .button-follow-us {
+    display: flex;
+  }
+  .footer-form {
+    display: flex;
+  }
+
+  .form-input {
+    margin-right: 12px;
+  }
 }

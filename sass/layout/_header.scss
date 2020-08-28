@@ -87,6 +87,7 @@
     position: absolute;
     opacity: 0;
     top: 100%;
+    z-index: 1000;
     width: 480px;
     height: 453px;
     padding-top: 60px;
@@ -163,10 +164,10 @@
       display: flex;
       align-items: center;
     }
-  }
 
-  .logo {
-    margin-right: 81px;
+    .logo {
+      margin-right: 81px;
+    }
   }
 
   .menu {
