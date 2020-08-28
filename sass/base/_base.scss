@@ -15,6 +15,9 @@ body {
   font-size: 14px;
   color: $primary-text-color;
 }
+.modal-open {
+  overflow: hidden;
+}
 
 button {
   border: none;
