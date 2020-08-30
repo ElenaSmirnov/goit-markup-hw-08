@@ -43,6 +43,22 @@
 }
 
 @media screen and (max-width: 767px) {
+  .features-list-item {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  .features-list-item-link {
+    display: flex;
+    height: 120px;
+    background-color: $secondary-white-color;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
   .features-list {
     .title {
       text-align: center;

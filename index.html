@@ -175,7 +175,18 @@
           <ul class="activities-list list">
             <li class="activities-list-item">
               <div class="image">
-                <img src="./images/laptop.jpg" alt="Лаптоп" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/laptop-desktop.jpg    1x,
+                      ./images/laptop-desktop@2x.jpg 2x
+                    "
+                    alt="Лаптоп"
+                    width="370"
+                    media="(min-width:1200px)"
+                  />
+                  <img src="./images/laptop.jpg" alt="Лаптоп" />
+                </picture>
                 <h3 class="title activities-list-title">
                   Десктопные приложения
                 </h3>
@@ -183,11 +194,18 @@
             </li>
             <li class="activities-list-item">
               <div class="image">
-                <img
-                  src="./images/mobile.jpg"
-                  alt="Мобильный телефон"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile-desktop.jpg    1x,
+                      ./images/mobile-desktop@2x.jpg 2x
+                    "
+                    alt="Мобильный телефон"
+                    width="370"
+                    media="(min-width:1200px)"
+                  />
+                  <img src="./images/mobile.jpg" alt="Мобильный телефон" />
+                </picture>
                 <h3 class="title activities-list-title">
                   Мобильные приложения
                 </h3>
@@ -195,7 +213,18 @@
             </li>
             <li class="activities-list-item">
               <div class="image">
-                <img src="./images/desktop.jpg" alt="Десктоп" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop-desktop.jpg    1x,
+                      ./images/desktop-desktop@2x.jpg 2x
+                    "
+                    alt="Десктоп"
+                    width="370"
+                    media="(min-width:1200px)"
+                  />
+                  <img src="./images/desktop.jpg" alt="Десктоп" />
+                </picture>
                 <h3 class="title activities-list-title">
                   Дизайнерские решения
                 </h3>
@@ -218,7 +247,7 @@
                   "
                   class="team-list-item-image"
                   alt="Член компании"
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
 
                 <source
@@ -301,7 +330,7 @@
                   "
                   class="team-list-item-image"
                   alt="Член компании"
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
 
                 <source
@@ -384,7 +413,7 @@
                   "
                   class="team-list-item-image"
                   alt="Член компании"
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
 
                 <source
@@ -467,7 +496,7 @@
                   "
                   class="team-list-item-image"
                   alt="Член компании"
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
 
                 <source

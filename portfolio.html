@@ -9,58 +9,86 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/normalise.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" />-->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="header header-portfolio">
+    <header class="header header-container">
       <div class="container portfolio">
-        <nav class="site-nav">
-          <a class="logo" lang="en" href="./index.html">
-            <span class="logo-web">Web</span>
-            <span class="logo-studio"> Studio</span>
-          </a>
-          <ul class="site-nav-list list">
-            <li class="site-nav-list-item">
-              <a href="./index.html" class="site-nav-list-item-link link"
-                >Студия</a
-              >
-            </li>
-            <li class="site-nav-list-item">
-              <a
-                href="./portfolio.html"
-                class="active-list-item site-nav-list-item-link link"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav-list-item">
-              <a href="" class="site-nav-list-item-link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="contacts">
-          <ul class="contacts-list list">
-            <li class="contacts-list-item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="contacts-list-icon link"
-              >
-                <svg class="mail-smartphone-icon" width="16px" height="11.2px">
-                  <use href="./images/sprite.svg#icon-e-mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts-list-item">
-              <a href="tel:+380961111111" class="contacts-list-icon link">
-                <svg class="mail-smartphone-icon" width="10px" height="14.94px">
-                  <use href="./images/sprite.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+        <a class="logo" lang="en" href="./index.html">
+          <span class="logo-web">Web</span>
+          <span class="logo-studio"> Studio</span>
+        </a>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="menu"
+          data-menu-button
+        >
+          <svg width="40px" height="40px">
+            <use
+              class="item-burger"
+              href="./images/sprite.svg#icon-burger"
+            ></use>
+            <use
+              class="item-close"
+              href="./images/sprite.svg#icon-close-modal"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu" data-menu>
+          <nav class="site-nav">
+            <ul class="site-nav-list list">
+              <li class="site-nav-list-item">
+                <a href="./index.html" class="site-nav-list-item-link link"
+                  >Студия</a
+                >
+              </li>
+              <li class="site-nav-list-item">
+                <a
+                  href="./portfolio.html"
+                  class="active-list-item site-nav-list-item-link link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav-list-item">
+                <a href="" class="site-nav-list-item-link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <ul class="contacts-list list">
+              <li class="contacts-list-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts-list-icon link"
+                >
+                  <svg
+                    class="mail-smartphone-icon"
+                    width="16px"
+                    height="11.2px"
+                  >
+                    <use href="./images/sprite.svg#icon-e-mail"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-list-item">
+                <a href="tel:+380961111111" class="contacts-list-icon link">
+                  <svg
+                    class="mail-smartphone-icon"
+                    width="10px"
+                    height="14.94px"
+                  >
+                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -90,12 +118,39 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/notebook-foto.jpg"
-                    alt="Проект1"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/notebook-foto-mobile.jpg    1x,
+                        ./images/notebook-foto-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект1"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/notebook-foto-desktop.jpg    1x,
+                        ./images/notebook-foto-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект1"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/notebook-foto-tablet.jpg    1x,
+                        ./images/notebook-foto-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект1"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/notebook-foto.jpg" alt="Проект1" />
+                  </picture>
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -112,12 +167,40 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/basketball.jpg"
-                    alt="Баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/basketball-mobile.jpg    1x,
+                        ./images/basketball-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект2"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/basketball-desktop.jpg    1x,
+                        ./images/basketball-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект2"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/basketball-tablet.jpg    1x,
+                        ./images/basketball-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект2"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/basketball.jpg" alt="Проект2" />
+                  </picture>
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -136,12 +219,39 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/restaurant.jpg"
-                    alt="Ресторан"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/restaraunt-tablet.jpg    1x,
+                        ./images/restaraunt-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект3"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaraunt-desktop.jpg    1x,
+                        ./images/restaraunt-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект3"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaraunt-mobile.jpg    1x,
+                        ./images/restaraunt-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект3"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/restaraunt.jpg" alt="Проект3" />
+                  </picture>
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -160,12 +270,40 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/headphones.jpg"
-                    alt="Наушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/headphones-mobile.jpg    1x,
+                        ./images/headphones-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект4"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/headphones-desktop.jpg    1x,
+                        ./images/headphones-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект4"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/headphones-tablet.jpg    1x,
+                        ./images/headphones-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект4"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/headphones.jpg" alt="Проект4" />
+                  </picture>
 
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
@@ -185,12 +323,40 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/boxes.jpg"
-                    alt="Коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/boxes-mobile.jpg    1x,
+                        ./images/boxes-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект5"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/boxes-desktop.jpg    1x,
+                        ./images/boxes-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект5"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-tablet.jpg    1x,
+                        ./images/boxes-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект5"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/boxes.jpg" alt="Проект5" />
+                  </picture>
 
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
@@ -210,12 +376,40 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/desktop-portfolio.jpg"
-                    alt="Десктоп"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop-portfolio-mobile.jpg    1x,
+                        ./images/desktop-portfolio-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект6"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop-portfolio-desktop.jpg    1x,
+                        ./images/desktop-portfolio-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект6"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop-portfolio-tablet.jpg    1x,
+                        ./images/desktop-portfolio-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект6"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/desktop-portfolio.jpg" alt="Проект6" />
+                  </picture>
 
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
@@ -235,12 +429,41 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/magazine.jpg"
-                    alt="Журнал"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/magazine-mobile.jpg    1x,
+                        ./images/magazine-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект7"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/magazine-desktop.jpg    1x,
+                        ./images/magazine-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект7"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/magazine-tablet.jpg    1x,
+                        ./images/magazine-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект7"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+
+                    <img src="./images/magazine.jpg" alt="Проект7" />
+                  </picture>
 
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
@@ -260,12 +483,40 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/label.jpg"
-                    alt="Бирка"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/label-mobile.jpg    1x,
+                        ./images/label-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект8"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/label-desktop.jpg    1x,
+                        ./images/label-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект8"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/label-tablet.jpg    1x,
+                        ./images/label-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект8"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/label.jpg" alt="Проект8" />
+                  </picture>
 
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
@@ -285,12 +536,40 @@
             <li class="projects-flex-element">
               <a class="projects-link link" href="">
                 <div class="projects-flex-element-img">
-                  <img
-                    class="projects-flex-element-image"
-                    src="./images/laptop.jpg"
-                    alt="Лаптоп"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/notebook-mobile.jpg    1x,
+                        ./images/notebook-mobile@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект9"
+                      media="(max-width:767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/notebook-desktop.jpg    1x,
+                        ./images/notebook-desktop@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект9"
+                      media="(min-width:1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/notebook-tablet.jpg    1x,
+                        ./images/notebook-tablet@2x.jpg 2x
+                      "
+                      class="projects-flex-element-image"
+                      alt="Проект9"
+                      media="(min-width:768px)"
+                      type="image/jpg"
+                    />
+                    <img src="./images/notebook.jpg" alt="Проект9" />
+                  </picture>
 
                   <p class="projects-description">
                     Технокряк это современная площадка распространения
@@ -402,5 +681,6 @@
         </div>
       </div>
     </footer>
+    <script src="./javascript/menu.js"></script>
   </body>
 </html>
