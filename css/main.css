@@ -1163,7 +1163,7 @@ p {
 }
 
 .form-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   color: #ffffff;
   background-color: transparent;
