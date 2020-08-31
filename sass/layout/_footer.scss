@@ -147,18 +147,6 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 1199px) {
-  .footer-content {
-    text-align: center;
-  }
-  .footer-contacts {
-    margin-bottom: 60px;
-  }
-  .subscribe {
-    margin-bottom: 60px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .form-input {
     width: 100%;
@@ -182,6 +170,18 @@
   }
   .form-input {
     width: 450px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-content {
+    text-align: center;
+  }
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
+  .subscribe {
+    margin-bottom: 60px;
   }
 }
 
